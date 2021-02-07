@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Create Account</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="../styles/main.css" />
+
+		<style>
+			.super
+			{
+				position: absolute;
+				left:100px;
+				top: 800px;
+			}
+		</style>
+
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<a href="/homepage" class="logo"><strong>Banking System</strong> by Abhinav</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="/createAccount">Create Account</a></li>
+					<li><a href="/getAccount">Get Account Info</a></li>
+					<li><a href="/deposit">Deposit Into Account</a></li>
+					<li><a href="/withdraw">Withdraw From Account</a></li>
+					<li><a href="/operations">View Account Operations</a></li>
+					<li><a href="/standingOrder">Create A Standing Order</a></li>
+				</ul>
+			</nav>
+
+        <section id="main">
+            <div class="inner">
+                <header class="major special">
+                    <h1>Create New Account</h1>
+                    <p>Open a new bank account instantly!</p>
+                </header>
+            </div>
+        </section>
+
+        
+        <!-- Form -->
+        <section id="main">
+            <div class="inner">
+            <h3>Account Details</h3>
+            <form method="post" action="/createAccountResponse">
+                <div class="row uniform 50%">
+
+                    <div class="12u$">
+                        <input type="text" name="typeOfAccount" id="typeOfAccount" value="" placeholder="Type Of Account" />
+                    </div>
+                    
+                    <div class="12u$">
+                        <input type="text" name="firstName" id="firstName" value="" placeholder="First Name" />
+                    </div>
+                    
+                    <div class="12u$">
+                        <input type="text" name="lastName" id="lastName" value="" placeholder="Last Name" />
+                    </div>
+
+                    <div class="12u$">
+                        <input type="text" name="phoneNumber" id="phoneNumber" value="" placeholder="Phone Number" />
+                    </div>
+
+                    <div class="12u$">
+                        <input type="text" name="aadharCardNumber" id="aadharCardNumber" value="" placeholder="Aadhar Card Number" />
+                    </div>
+
+                    <div class="12u$">
+                        <input type="text" name="emailId" id="emailId" value="" placeholder="Email ID" />
+                    </div>
+
+                    <div class="12u$">
+                        <input type="text" name="address" id="address" value="" placeholder="Address" />
+                    </div>
+
+                    <div class="12u$">
+                        <input type="text" name="dateOfBirth" id="dateOfBirth" value="" placeholder="Date Of Birth" />
+                    </div>
+
+                    <div class="12u$">
+                        <input type="text" name="bankBranch" id="bankBranch" value="" placeholder="Bank Branch" />
+                    </div>
+
+                    <div class="12u$">
+                        <input type="text" name="ifscCode" id="ifscCode" value="" placeholder="IFSC Code" />
+                    </div>
+
+                    <div class="12u$">
+                        <input type="text" name="pinCode" id="pinCode" value="" placeholder="PIN Code" />
+                    </div>
+                    <br><br>
+                    <div class="12u$">
+                        <ul class="actions">
+                            <li><input type="submit" value="Submit" class="special" /></li>
+                            <li><input type="reset" value="Reset" /></li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+            </div>
+        </section>
+
+		
+
+		<!-- Scripts -->
+        <script src="../styles/jquery.min.js"></script>
+        <script src="../styles/jquery.scrolly.min.js"></script>
+        <script src="../styles/skel.min.js"></script>
+        <script src="../styles/util.js"></script>
+        <script src="../styles/main.js"></script>
+
+	</body>
+</html>

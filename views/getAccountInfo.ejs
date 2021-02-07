@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Get Account Information</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="../styles/main.css" />
+
+		<style>
+			.super
+			{
+				position: absolute;
+				left:100px;
+				top: 800px;
+			}
+		</style>
+
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<a href="/homepage" class="logo"><strong>Banking System</strong> by Abhinav</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="/createAccount">Create Account</a></li>
+					<li><a href="/getAccount">Get Account Info</a></li>
+					<li><a href="/deposit">Deposit Into Account</a></li>
+					<li><a href="/withdraw">Withdraw From Account</a></li>
+					<li><a href="/operations">View Account Operations</a></li>
+					<li><a href="/standingOrder">Create A Standing Order</a></li>
+				</ul>
+			</nav>
+
+        <section id="main">
+            <div class="inner">
+                <header class="major special">
+                    <h1>Get Account Information</h1>
+                    <p>Get Details of your Account!</p>
+                </header>
+            </div>
+        </section>
+
+        
+        <!-- Form -->
+        <section id="main">
+            <div class="inner">
+            <h3>Enter Account Number</h3>
+            <form method="post" action="/getAccountInfoResponse">
+                <div class="row uniform 50%">
+
+                    <div class="12u$">
+                        <input type="text" name="accNo" id="accNo" value="" placeholder="Account Number" />
+                    </div>
+                    
+                
+                    <br><br>
+                    <div class="12u$">
+                        <ul class="actions">
+                            <li><input type="submit" value="Submit" class="special" /></li>
+                            <li><input type="reset" value="Reset" /></li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+            </div>
+        </section>
+
+		
+
+		<!-- Scripts -->
+        <script src="../styles/jquery.min.js"></script>
+        <script src="../styles/jquery.scrolly.min.js"></script>
+        <script src="../styles/skel.min.js"></script>
+        <script src="../styles/util.js"></script>
+        <script src="../styles/main.js"></script>
+
+	</body>
+</html>

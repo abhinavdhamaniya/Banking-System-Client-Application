@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Account Operations</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="../styles/main.css" />
+
+		<style>
+			.super
+			{
+				position: absolute;
+				left:100px;
+				top: 800px;
+			}
+		</style>
+
+        <script>
+            
+                var operationsListString = '<%- JSON.stringify(operationsList) %>';
+                var operationsList = JSON.parse(operationsListString);
+                window.onload = function(){
+                    init();
+                }
+                function init()
+                {
+                    //console.log(operationsList);
+                    for(var i=0; i<operationsList.length; i++)
+                    {
+                        addrow(i);
+                        
+                    }
+                }
+                function addrow(index)
+                {
+                    var table = document.getElementById("mytable");
+                    var row = table.insertRow(-1);
+                    var cell1 = row.insertCell(0);
+                    var cell2 = row.insertCell(1);
+                    var cell3 = row.insertCell(2);
+                    var cell4 = row.insertCell(3);
+                    var cell5 = row.insertCell(4);
+                    cell1.innerHTML = operationsList[index].type;
+                    cell2.innerHTML =  operationsList[index].accountNumber;
+                    cell3.innerHTML =  operationsList[index].amount;
+                    cell4.innerHTML =  operationsList[index].date;
+                    cell5.innerHTML =  operationsList[index].balanceAfterTransaction;
+                }
+                
+        </script>
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<a href="/homepage" class="logo"><strong>Banking System</strong> by Abhinav</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="/createAccount">Create Account</a></li>
+					<li><a href="/getAccount">Get Account Info</a></li>
+					<li><a href="/deposit">Deposit Into Account</a></li>
+					<li><a href="/withdraw">Withdraw From Account</a></li>
+					<li><a href="/operations">View Account Operations</a></li>
+					<li><a href="/standingOrder">Create A Standing Order</a></li>
+				</ul>
+			</nav>
+
+        <section id="main">
+            <div class="inner">
+                <header class="major special">
+                    <h1>Account Operations</h1>
+                    <p>Here are your account operations!</p>
+                </header>
+            </div>
+
+            
+            <div class="inner">
+        
+            <div class="table-wrapper">
+                <table id="mytable">
+                    <thead>
+                        <tr>
+                            <th>Operation Type</th>
+                            <th>Account Number</th>
+                            <th>Amount</th>
+                            <th>Timestamp</th>
+                            <th>Balance After Transaction</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                       
+                       
+                    </tbody>
+                    
+                </table>
+            </div>
+        </div>
+        </section>
+
+        
+        
+            </div>
+        </section>
+
+		
+
+		<!-- Scripts -->
+        <script src="../styles/jquery.min.js"></script>
+        <script src="../styles/jquery.scrolly.min.js"></script>
+        <script src="../styles/skel.min.js"></script>
+        <script src="../styles/util.js"></script>
+        <script src="../styles/main.js"></script>
+
+	</body>
+</html>

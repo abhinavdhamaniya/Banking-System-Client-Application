@@ -1,0 +1,362 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Banking System</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="../styles/main.css" />
+
+		<style>
+			.super
+			{
+				position: absolute;
+				left:100px;
+				top: 800px;
+			}
+		</style>
+
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<a href="/homepage" class="logo"><strong>Banking System</strong> by Abhinav</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="/createAccount">Create Account</a></li>
+					<li><a href="/getAccount">Get Account Info</a></li>
+					<li><a href="/deposit">Deposit Into Account</a></li>
+					<li><a href="/withdraw">Withdraw From Account</a></li>
+					<li><a href="/operations">View Account Operations</a></li>
+					<li><a href="/standingOrder">Create A Standing Order</a></li>
+				</ul>
+			</nav>
+
+		<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+					<h1>WELCOME TO BANKING SYSTEM<br /></h1>
+					<hr>
+					REST API created with Spring
+					<hr>
+				</div>
+			</section>
+
+		<div class="super">
+		<!-- One -->
+			<article id="one" class="post style1">
+				
+				<section>
+					
+					<hr />
+					<h2>POST </h2>
+					<hr />
+
+					<h4>Request Body : Accounts Object</h4>
+					<pre>
+						<code>
+{
+	"typeOfAccount": "Salary",
+	"firstName": "Sample user 2",
+	"lastName": "Sample lastname2",
+	"phoneNumber": "123456789",
+	"aadharCardNumber": "XXXXXXXXXXXXX",
+	"emailId": "sample@gmail.com",
+	"address": "Jaipur, Rajasthan",
+	"dateOfBirth": "06-11-97",
+	"bankBranch": "Tonk road",
+	"ifscCode": "1124",
+	"pinCode": "302015"
+}
+
+						</code>
+					</pre>
+
+			
+				</section>
+				<section>
+					
+					<hr />
+					<h2>/BankingSystem/v1.0/accounts/</h2>
+					<hr />
+
+					<h4>Response Body : Accounts Object With Account Number (Auto Generated) And Balance (0)</h4>
+					<pre>
+						<code>
+{
+	"accountNumber": "20",
+	"typeOfAccount": "Salary",
+	"firstName": "Sample user 22",
+	"lastName": "Sample lastname22",
+	"phoneNumber": "123456789",
+	"aadharCardNumber": "XXXXXXXXXXXXX",
+	"emailId": "sample@gmail.com",
+	"address": "XXXXXXXXXXXXX",
+	"dateOfBirth": "06-11-97",
+	"bankBranch": "Tonk road",
+	"ifscCode": "1124",
+	"pinCode": "302015",
+	"accountBalance": 0
+}
+
+						</code>
+					</pre>
+				</section>
+			</article>
+
+
+		<!-- Two -->
+		<article id="one" class="post style1">
+				
+			<section>
+				
+				<hr />
+				<h2>GET </h2>
+				<hr />
+
+				<h4>Request Body : NULL</h4>
+				<pre>
+					<code>
+
+					</code>
+				</pre>
+
+		
+			</section>
+			<section>
+				
+				<hr />
+				<h2>/BankingSystem/v1.0/accounts/{accountId}</h2>
+				<hr />
+
+				<h4>Response Body : Accounts Object</h4>
+				<pre>
+					<code>
+{
+"accountNumber": "20",
+"typeOfAccount": "Salary",
+"firstName": "Sample user 22",
+"lastName": "Sample lastname22",
+"phoneNumber": "123456789",
+"aadharCardNumber": "XXXXXXXXXXXXX",
+"emailId": "sample@gmail.com",
+"address": "XXXXXXXXXXXXX",
+"dateOfBirth": "06-11-97",
+"bankBranch": "Tonk road",
+"ifscCode": "1124",
+"pinCode": "302015",
+"accountBalance": 0
+}
+
+					</code>
+				</pre>
+			</section>
+		</article>
+
+		<!-- Three -->
+		<article id="one" class="post style1">
+				
+			<section>
+				
+				<hr />
+				<h2>POST </h2>
+				<hr />
+
+				<h4>Request Body : Integer (Amount)</h4>
+				<pre>
+					<code>
+666
+					</code>
+				</pre>
+
+		
+			</section>
+			<section>
+				
+				<hr />
+				<h2>/BankingSystem/v1.0/accounts/{accountId}/deposits</h2>
+				<hr />
+
+				<h4>Response Body : Accounts Object with updated Balance</h4>
+				<pre>
+					<code>
+{
+	"accountNumber": "20",
+	"typeOfAccount": "Salary",
+	"firstName": "Sample user 22",
+	"lastName": "Sample lastname22",
+	"phoneNumber": "123456789",
+	"aadharCardNumber": "XXXXXXXXXXXXX",
+	"emailId": "sample@gmail.com",
+	"address": "XXXXXXXXXXXXX",
+	"dateOfBirth": "06-11-97",
+	"bankBranch": "Tonk road",
+	"ifscCode": "1124",
+	"pinCode": "302015",
+	"accountBalance": 666
+}
+
+					</code>
+				</pre>
+			</section>
+		</article>
+
+		<!-- Four -->
+		<article id="one" class="post style1">
+				
+			<section>
+				
+				<hr />
+				<h2>POST </h2>
+				<hr />
+
+				<h4>Request Body : Integer (Amount)</h4>
+				<pre>
+					<code>
+100
+					</code>
+				</pre>
+
+		
+			</section>
+			<section>
+				
+				<hr />
+				<h2>/BankingSystem/v1.0/accounts/{accountId}/withdrawals</h2>
+				<hr />
+
+				<h4>Response Body : Accounts Object with updated Balance</h4>
+				<pre>
+					<code>
+{
+	"accountNumber": "20",
+	"typeOfAccount": "Salary",
+	"firstName": "Sample user 22",
+	"lastName": "Sample lastname22",
+	"phoneNumber": "123456789",
+	"aadharCardNumber": "XXXXXXXXXXXXX",
+	"emailId": "sample@gmail.com",
+	"address": "XXXXXXXXXXXXX",
+	"dateOfBirth": "06-11-97",
+	"bankBranch": "Tonk road",
+	"ifscCode": "1124",
+	"pinCode": "302015",
+	"accountBalance": 566
+}
+
+					</code>
+				</pre>
+			</section>
+		</article>
+
+
+		<!-- Five -->
+		<article id="one" class="post style1">
+				
+			<section>
+				
+				<hr />
+				<h2>GET </h2>
+				<hr />
+
+				<h4>Request Body : NULL</h4>
+				<pre>
+					<code>
+
+					</code>
+				</pre>
+
+		
+			</section>
+			<section>
+				
+				<hr />
+				<h2>/BankingSystem/v1.0/accounts/{accountId}/operations</h2>
+				<hr />
+
+				<h4>Response Body : List Of Operations</h4>
+				<pre>
+					<code>
+[
+	{
+		"type": "deposit",
+		"date": "Feb 07,2021 23:34",
+		"balanceAfterTransaction": "666",
+		"accountNumber": "20",
+		"amount": 666
+	},
+	{
+		"type": "withdrawal",
+		"date": "Feb 07,2021 23:37",
+		"balanceAfterTransaction": "566",
+		"accountNumber": "20",
+		"amount": 100
+	}
+]
+
+					</code>
+				</pre>
+			</section>
+		</article>
+
+		<!-- Five -->
+		<article id="one" class="post style1">
+						
+			<section>
+				
+				<hr />
+				<h2>POST </h2>
+				<hr />
+
+				<h4>Request Body : Standing Order Object</h4>
+				<pre>
+					<code>
+{
+	"toAccount": 17,
+	"amount": 100
+}
+					</code>
+				</pre>
+
+
+			</section>
+			<section>
+				
+				<hr />
+				<h2>/BankingSystem/v1.0/accounts/{accountId}/standing-orders</h2>
+				<hr />
+
+				<h4>Response Body : Standing Order Object</h4>
+				<pre>
+					<code>
+{
+	"fromAccount": "20",
+	"toAccount": "17",
+	"amount": 100
+}
+
+					</code>
+				</pre>
+			</section>
+		</article>
+
+
+	</div>
+		
+
+		<!-- Scripts -->
+			<script src="../styles/jquery.min.js"></script>
+			<script src="../styles/jquery.scrolly.min.js"></script>
+			<script src="../styles/skel.min.js"></script>
+			<script src="../styles/util.js"></script>
+			<script src="../styles/main.js"></script>
+
+	</body>
+</html>
